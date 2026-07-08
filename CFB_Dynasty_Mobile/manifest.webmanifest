@@ -1,0 +1,15 @@
+{
+  "name": "Dynasty HQ — Recruiting",
+  "short_name": "Dynasty HQ",
+  "description": "Build your college football dynasty: fill your recruiting board, spend your hours, fight off rival schools, and develop your players and coach.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
