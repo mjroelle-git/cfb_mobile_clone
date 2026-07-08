@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <title>Dynasty HQ</title>
+  <meta name="theme-color" content="#0b1020" />
+  <!-- iOS home-screen app -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Dynasty HQ" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Top bar -->
+    <header id="topbar">
+      <div class="tb-left">
+        <div class="tb-crest" id="tbCrest">D</div>
+        <div class="tb-team">
+          <div class="tb-name" id="tbSchool">Dynasty U</div>
+          <div class="tb-sub" id="tbSub">Season 1 · Week 1</div>
+        </div>
+      </div>
+      <div class="tb-right">
+        <div class="tb-hours">
+          <div class="tb-hours-num" id="tbHours">50</div>
+          <div class="tb-hours-lbl">HRS LEFT</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Coach XP strip -->
+    <div id="xpstrip">
+      <div class="xp-coach">
+        <span class="xp-lvl" id="xpLvl">Lv 1</span>
+        <span class="xp-title" id="xpTitle">Position Coach</span>
+      </div>
+      <div class="xp-track"><div class="xp-fill" id="xpFill"></div></div>
+      <div class="xp-num" id="xpNum">0 / 100 XP</div>
+    </div>
+
+    <!-- Screens -->
+    <main id="screens"></main>
+
+    <!-- Bottom nav -->
+    <nav id="tabbar">
+      <button class="tab active" data-tab="hub"><span class="ti">⌂</span><span>Hub</span></button>
+      <button class="tab" data-tab="board"><span class="ti">▦</span><span>Board</span></button>
+      <button class="tab" data-tab="prospects"><span class="ti">◎</span><span>Scout</span></button>
+      <button class="tab" data-tab="roster"><span class="ti">▤</span><span>Roster</span></button>
+      <button class="tab" data-tab="season"><span class="ti">❖</span><span>Season</span></button>
+      <button class="tab" data-tab="coach"><span class="ti">★</span><span>Coach</span></button>
+    </nav>
+  </div>
+
+  <!-- Toast + modal layer -->
+  <div id="toast"></div>
+  <div id="modal" class="hidden"><div id="modalCard"></div></div>
+
+  <script src="core.js"></script>
+  <script src="teams.js"></script>
+  <script src="gamedata.js"></script>
+  <script src="season.js"></script>
+  <script src="develop.js"></script>
+  <script src="program.js"></script>
+  <script src="recruit.js"></script>
+  <script src="pipeline.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
+    }
+  </script>
+</body>
+</html>
